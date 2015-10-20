@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "Staffify"
+AuthUserFile "/home/santa/.htpasswds/public_html/staffify/passwd"
+require valid-user
+
+# BEGIN WordPress
+
+# END WordPress
