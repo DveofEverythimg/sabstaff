@@ -22,3 +22,7 @@ wp_dequeue_style( 'jobify_fonts' );
 wp_enqueue_style( 'jobify-custom-fonts', 'https://fonts.googleapis.com/css?family=Raleway:800,500' );
 }
 add_action( 'wp_enqueue_scripts', 'custom_jobify_fonts', 20 );
+
+add_filter( 'woocommerce_default_address_fields', 'my_default_address_fields' ); 
+
+function my_default_address_fields( $fields ) { $fields['city']['label'] = 'City'; $fields['city']['placeholder'] = 'City'; return $fields; }
